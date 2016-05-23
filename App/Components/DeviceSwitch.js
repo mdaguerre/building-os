@@ -7,6 +7,7 @@ import {
   View,
   Switch,
 } from 'react-native';
+var api = require('../Utils/api');
 
 class DeviceSwitch extends React.Component {
   constructor(props) {
@@ -30,9 +31,8 @@ class DeviceSwitch extends React.Component {
 
   handleChange(value) {
     this.setState({isOn: value})
-
     let action = value ? 'on' : 'off';
-     api.modifyBinaryDevice(this.props.device.id, this.props.device.function, action)
+    api.modifyBinaryDevice(this.props.device.id, this.props.device.function, action)
   }
 };
 
