@@ -13,7 +13,7 @@ import {
   NavigatorIOS
 } from 'react-native';
 
-var DevicesList = require('./App/Components/DevicesList');
+var RoomsList = require('./App/Components/RoomsList');
 
 class BuildingOs extends Component {
   render() {
@@ -21,8 +21,8 @@ class BuildingOs extends Component {
     <NavigatorIOS
       style={styles.simpleContainer}
       initialRoute={{
-        component: DevicesList,
-        title: 'Devices'
+        component: RoomsList,
+        title: 'Rooms'
       }}
     />
   );
